@@ -18,7 +18,6 @@ setup(
     packages=find_packages(),
     long_description=read('README.rst'),
     install_requires=[
-        'scandir',
         'librarian_core',
         'librarian_lock',
         'librarian_sqlite',
