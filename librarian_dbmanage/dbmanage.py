@@ -6,7 +6,7 @@ import time
 from bottle import request
 from bottle_utils.i18n import i18n_url
 
-from librarian_library.library.archive import Archive
+from librarian_content.library.archive import Archive
 from librarian_lock.lock import global_lock
 from librarian_sqlite.utils import get_database_configs, migrate
 
