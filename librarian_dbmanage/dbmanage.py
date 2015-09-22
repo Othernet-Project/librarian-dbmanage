@@ -13,7 +13,7 @@ from librarian_sqlite.utils import get_database_configs, migrate
 from .backup import backup
 
 
-DB_NAME = 'main'
+DB_NAME = 'content'
 
 
 def get_dbpath():
@@ -68,7 +68,7 @@ def rebuild():
     dbpath = db_configs[DB_NAME]['path']
     bpath = get_backup_path()
     start = time.time()
-    db = request.db.main
+    db = request.db.content
     logging.debug('Locking database')
     db.acquire_lock()
     logging.debug('Acquiring global lock')
