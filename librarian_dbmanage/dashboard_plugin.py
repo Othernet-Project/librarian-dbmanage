@@ -19,7 +19,7 @@ from librarian_dashboard.dashboard import DashboardPlugin
 from .dbmanage import get_dbpath
 
 
-class Dashboard(DashboardPlugin):
+class DBManageDashboardPlugin(DashboardPlugin):
     # Translators, used as dashboard section title
     heading = _('Content database')
     name = 'dbmanage'
