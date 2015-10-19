@@ -87,7 +87,7 @@ def rebuild():
                                 unpackdir=conf['library.unpackdir'],
                                 contentdir=conf['library.contentdir'],
                                 spooldir=conf['library.spooldir'],
-                                meta_filename=conf['library.metadata'])
+                                meta_filenames=conf['library.metadata'])
         rows = archive.reload_content()
         logging.info('Restored metadata for %s pieces of content', rows)
     request.app.supervisor.exts.cache.invalidate('content')
