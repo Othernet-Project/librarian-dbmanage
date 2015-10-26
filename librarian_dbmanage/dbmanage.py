@@ -83,10 +83,9 @@ def rebuild():
         run_migrations(db, db_configs[DB_NAME])
         logging.debug('Prepared new database')
         archive = Archive.setup(conf['library.backend'],
+                                request.app.supervisor.exts.fsal,
                                 db,
-                                unpackdir=conf['library.unpackdir'],
                                 contentdir=conf['library.contentdir'],
-                                spooldir=conf['library.spooldir'],
                                 meta_filenames=conf['library.metadata'])
         rows = archive.reload_content()
         logging.info('Restored metadata for %s pieces of content', rows)
