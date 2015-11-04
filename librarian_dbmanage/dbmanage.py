@@ -8,8 +8,8 @@ from bottle_utils.i18n import i18n_url
 
 from librarian_content.library.archive import Archive
 from librarian_lock.lock import global_lock
-from librarian_core.contrib.databases.utils import (get_database_configs,
-                                                    migrate)
+from librarian_core.contrib.databases.helpers import (get_database_configs,
+                                                      migrate)
 
 from .backup import backup
 
