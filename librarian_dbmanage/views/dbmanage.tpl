@@ -1,5 +1,3 @@
-<%inherit file="_dashboard_section.tpl"/>
-
 <p>
 ${_('Database size')}: ${h.hsize(dbsize)}
 </p>

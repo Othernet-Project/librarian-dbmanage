@@ -1,0 +1,14 @@
+/* line 2, ../../../src/scss/dbmanage.scss */
+#dbmanage .inline-form-wrapper {
+  margin-bottom: 1em;
+}
+/* line 5, ../../../src/scss/dbmanage.scss */
+#dbmanage .inline-form-wrapper form {
+  display: inline-block;
+}
+/* line 10, ../../../src/scss/dbmanage.scss */
+#dbmanage .warning {
+  color: #999;
+  font-weight: bold;
+  max-width: 40em;
+}
