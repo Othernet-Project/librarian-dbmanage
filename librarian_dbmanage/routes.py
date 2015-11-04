@@ -1,7 +1,7 @@
 import logging
 import os
 
-from bottle import static_file
+from bottle import request, static_file
 from bottle_utils.common import unicode
 from bottle_utils.i18n import lazy_ngettext, lazy_gettext as _, i18n_url
 
@@ -84,7 +84,7 @@ def perform_rebuild():
         message = ' '.join(map(unicode, [base_msg, took_msg]))
         # Translators, message displayed if database backup was successful
         status = 'success'
-        url = i18n_url('content:list')
+        url = i18n_url(request.app.config['app.default_route'])
         # Translators, redirection target if database backup was successful
         target = _('Library')
 
