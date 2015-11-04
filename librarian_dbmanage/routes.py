@@ -34,9 +34,9 @@ def perform_backup():
     else:
         # Translators, message displayed if database backup was successful
         base_msg = _('Database backup has been completed successfully.')
-        took_msg = lazy_ngettext('The operation took %s second',
-                                 'The operation took %s seconds',
-                                 btime) % round(btime, 2)
+        took_msg = lazy_ngettext('The operation took {time} second',
+                                 'The operation took {time} seconds',
+                                 btime).format(time=round(btime, 2))
         message = ' '.join(map(unicode, [base_msg, took_msg]))
         status = 'success'
         url = get_file_url()
@@ -78,9 +78,9 @@ def perform_rebuild():
                      ' copy of the original database has been created. '
                      'You will find it in the files section.')
         # Translators, message displayed if database backup was successful
-        took_msg = lazy_ngettext('The operation took %s second',
-                                 'The operation took %s seconds',
-                                 rtime) % round(rtime, 2)
+        took_msg = lazy_ngettext('The operation took {time} second',
+                                 'The operation took {time} seconds',
+                                 rtime).format(time=round(rtime, 2))
         message = ' '.join(map(unicode, [base_msg, took_msg]))
         # Translators, message displayed if database backup was successful
         status = 'success'
