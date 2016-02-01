@@ -85,7 +85,6 @@ def rebuild():
         archive = Archive.setup(conf['library.backend'],
                                 request.app.supervisor.exts.fsal,
                                 db,
-                                contentdir=conf['library.contentdir'],
                                 meta_filenames=conf['library.metadata'])
         rows = archive.reload_content()
         logging.info('Restored metadata for %s pieces of content', rows)
